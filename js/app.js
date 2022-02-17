@@ -38,10 +38,11 @@ document.getElementById('calculate-amount').addEventListener('click', function (
         savingAmount.innerText = totalSavingAmount;
         // console.log('yey', savingAmount);
         // remaining balance 
+        const remainingBalance = currentBalance - finalSavingAmount;
         const remainingAmount = document.getElementById('remaining-balance');
         remainingAmount.innerText = remainingBalance;
-        const remainingBalance = currentBalance - totalSavingAmount;
         console.log('yey', remainingBalance);
+
 
 
     })
