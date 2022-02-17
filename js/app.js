@@ -21,10 +21,28 @@ document.getElementById('calculate-amount').addEventListener('click', function (
 
     totalExpensesText.innerText = totalExpenses
 
-
+    // total balance
     const currentBalance = totalIncomeAmount - totalExpenses
 
     const currentBalanceText = document.getElementById('total-balance')
 
     currentBalanceText.innerText = currentBalance;
+
+    // saving amount 
+    document.getElementById('save-amount').addEventListener('click', function () {
+        const saveInput = document.getElementById('save-input').value
+        const totalSavingAmount = currentBalance / saveInput;
+        const finalSavingAmount = parseInt(totalSavingAmount);
+        // console.log('yey', totalSavingAmount);
+        const savingAmount = document.getElementById('saving-balance');
+        savingAmount.innerText = totalSavingAmount;
+        // console.log('yey', savingAmount);
+        // remaining balance 
+        const remainingAmount = document.getElementById('remaining-balance');
+        remainingAmount.innerText = remainingBalance;
+        const remainingBalance = currentBalance - totalSavingAmount;
+        console.log('yey', remainingBalance);
+
+
+    })
 })
