@@ -1,3 +1,4 @@
+
 document.getElementById('calculate-amount').addEventListener('click', function () {
 
     const incomeAmount = document.getElementById('income-amount').value;
@@ -14,12 +15,16 @@ document.getElementById('calculate-amount').addEventListener('click', function (
     const clothesAmount = document.getElementById('clothes-amount').value;
     const totalClothesAmount = parseInt(clothesAmount);
 
-    const totalExpenses = document.getElementById('total-expenses');
+    const totalExpenses = totalFoodAmount + totalRentAmount + totalClothesAmount;
 
-    totalExpenses.innerText = totalFoodAmount + totalRentAmount + totalClothesAmount;
-    console.log('totalexpenses')
-    // total balance
-    const totalBalance = document.getElementById('total-balance');
-    totalBalance.innerText = totalIncomeAmount - totalExpenses;
-    console.log('totalblance');
+    const totalExpensesText = document.getElementById('total-expenses')
+
+    totalExpensesText.innerText = totalExpenses
+
+
+    const currentBalance = totalIncomeAmount - totalExpenses
+
+    const currentBalanceText = document.getElementById('total-balance')
+
+    currentBalanceText.innerText = currentBalance;
 })
