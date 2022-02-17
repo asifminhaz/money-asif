@@ -1,0 +1,6 @@
+.container{
+    display: flex;
+}
+.picture{
+   margin-right: 50px;
+}
