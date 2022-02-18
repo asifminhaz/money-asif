@@ -47,3 +47,4 @@ document.getElementById('calculate-amount').addEventListener('click', function (
 
     })
 })
+

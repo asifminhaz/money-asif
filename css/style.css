@@ -4,10 +4,15 @@
 .picture{
    margin-right: 50px;
 }
-.alert{
+.alert-section{
     display: none;
 }
 
 /* responsive  */
-
- 
+@media only screen and (max-width: 688px) {
+    .contaier{
+        grid-template-columns: repeat(1 , 1fr);
+        width: 100%;
+    }
+    
+}
